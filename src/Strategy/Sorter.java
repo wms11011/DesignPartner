@@ -7,13 +7,13 @@ package Strategy;
  */
 class Sorter {
 
-    static void sort(int[] array) {
+    static void sort(Comparable[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             int min = i;
             for (int j = min+1; j < array.length; j++) {
-                min = array[min] > array[j]?j : min;
+                min = array[min].compareTo(array[j]) == -1?min : j;
             }
-            int temp = array[min];
+            Comparable temp = array[min];
             array[min] = array[i];
             array[i]= temp;
         }

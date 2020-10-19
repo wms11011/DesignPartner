@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class main {
 
     public static void main(String[] args) {
-        int[] array = {9,2,5,7,6,2,4};
+        Cat[] array = {new Cat(3,3),new Cat(5,5),new Cat(2,2)};
         Sorter sorter = new Sorter();
         Sorter.sort(array);
         System.out.println(Arrays.toString(array));
