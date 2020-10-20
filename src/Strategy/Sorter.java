@@ -5,15 +5,15 @@ package Strategy;
  * 2020/10/19
  * @ClassName Sorter.java
  */
-class Sorter {
+class Sorter<T> {
 
-    static void sort(Comparable[] array) {
+    void sort(T[] array, Comparator<T> comparator) {
         for (int i = 0; i < array.length - 1; i++) {
             int min = i;
             for (int j = min+1; j < array.length; j++) {
-                min = array[min].compareTo(array[j]) == -1?min : j;
+                min = comparator.compare(array[min],array[j]) == -1?min : j;
             }
-            Comparable temp = array[min];
+            T temp = array[min];
             array[min] = array[i];
             array[i]= temp;
         }
