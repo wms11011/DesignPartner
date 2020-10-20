@@ -7,7 +7,7 @@ package FactoryMethod;
  */
 public class Main {
     public static void main(String[] args) {
-
+        // 下面两种都是简单工厂的实现
         Moveable moveable = new SimpleVehicleFactory().createCar();
         moveable.go();
 
