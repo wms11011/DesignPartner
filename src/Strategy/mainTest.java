@@ -7,12 +7,12 @@ import java.util.Arrays;
  * 2020/10/19
  * @ClassName main.java
  */
-public class main {
+public class mainTest {
 
     public static void main(String[] args) {
         Cat[] array = {new Cat(3,3),new Cat(5,5),new Cat(2,2)};
-        Sorter sorter = new Sorter();
-        Sorter.sort(array);
+        Sorter<Cat> sorter = new Sorter<>();
+        sorter.sort(array,new CatComparator());
         System.out.println(Arrays.toString(array));
     }
 }
